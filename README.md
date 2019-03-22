@@ -3,7 +3,7 @@ Automates searching Shodan for vulnerable systems within the same postal code.
 
 ---
 
-Check-out the related blog post I wrote to help explain how Starcluster works: <br>
+Check-out the related blog post I wrote to explain how Starcluster works: <br>
 https://www.yoursecurity.tech/python-shodan-starcluster.html
 
 ## Outline
