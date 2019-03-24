@@ -1,32 +1,8 @@
 # Python: Shodan Starcluster
-Automates searching Shodan for vulnerable systems within the same postal code.
 
----
+Starcluster automates searching for vulnerable systems within the same postal code. It is written in Python 3 and relies on three, third-party libraries: the Shodan API, GuerrillaMail, and MechanicalSoup.
 
-Check-out the related blog post I wrote to explain how Starcluster works: <br>
-https://www.yoursecurity.tech/python-shodan-starcluster.html
-
-## Outline
-* Imported Libraries
-	* Built-in Libraries
-	* Third-party Libraries
-		* GuerrillaMail
-		* MechanicalSoup
-		* Shodan
-* Main Logic
-	* Scenario #1: API key & postal code provided
-	* Scenario #2: Only API key provided
-	* Scenario #3: Only postal code
-	* Scenario #4: Nothing is provided
-* Primary Functions
-	* getShodanAPIkey()
-	* findNeighborhood()
-	* searchPostalCode()
-* Script Header
-	* Hashbang
-	* Encoding
-	* Docstring
-	* Dunders
+Shodan is the flare-gun of the script. With an API key & query statement, it searches its remote database of devices directly connected to the Internet. GuerrillaMail generates temporary e-mailboxes that expire after one hour (used to register for a Shodan account). MechanicalSoup is a combination of two other libraries: Mechanize and BeautifulSoup. The former interacts with web pages and submit forms while the latter parses HTML tags.
 
 ---
 
