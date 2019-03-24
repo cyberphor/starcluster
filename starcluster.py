@@ -50,7 +50,7 @@ def generateEmail():
         email = gm.get_session_state()['email_address']
         username = email[:-23]
     except guerrillamail.GuerrillaMailException:
-        log('[!] The GuerilliaMail API might be down...')
+        log('[!] The GuerrillaMail API might be down...')
         exit()
 
 def generatePassword():
