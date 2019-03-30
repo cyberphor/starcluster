@@ -12,7 +12,7 @@ sudo apt install python3 pip3
 ```
 Install third-party libraries
 ```
-sudo pip3 install shodan guerrillamail mechanicalsoup
+sudo pip3 install shodan python-guerrillamail mechanicalsoup
 ```
 Download script
 ```
