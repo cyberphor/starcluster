@@ -23,15 +23,19 @@ import time
 import guerrillamail
 import shodan
 
-# define global variables
+# define user-agent variables
 product  = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) '
 platform = 'AppleWebKit/537.36 (KHTML, like Gecko) '
 extensions = 'Chrome/42.0.2311.135 Safari/537.36 Edge/12.246'
 windows10 = product + platform + extensions
 custom_headers = {'user-agent': windows10}
-webpage = 'https://account.shodan.io/login'
+
+# define API key search variables
 pattern1 = '<input type="hidden" name="csrf_token" value='
 pattern2 = '<li id="api-key-content" style="display:none">'
+
+# define global variables
+webpage = 'https://account.shodan.io/login'
 shodan_home = 'https://www.shodan.io'
 shodan_login = 'https://account.shodan.io/login'
 shodan_register = 'https://account.shodan.io/register'
@@ -46,7 +50,7 @@ logger = logging.getLogger()
 logger.addHandler(logging.StreamHandler())
 log = logger.info
 
-# check for a valid Shodan API key in starcluster logs
+# check for Shodan API key in current working directory
 def api_key_check():
     key = 'Using Shodan API key'
     current_directory = glob.glob('./*.log')
@@ -101,7 +105,7 @@ def register_with_shodan():
         if (len(inbox.get_email_list()) == 2):
             sys.stdout.flush()
             sys.stdout.write('\b' * 33)
-            print(' ---> You got mail.')
+            print(" ---> You've got mail.")
             break
         elif (counter == 0):
             sys.stdout.flush()
@@ -131,11 +135,13 @@ def get_api_key():
         return matches2[0]
 
 def find_neighborhood():
+    # this function is filler; must fix other functions first
     postal_code = '79908'
     print('[*] Launching digital starcluster over: %s' % postal_code)
     return postal_code
 
 def search_neighborhood():
+    # this function is filler; must fix other functions first
     postal_code = find_neighborhood()
     neighbor_ip = '1.1.1.1'
     neighbor_port = '80'
