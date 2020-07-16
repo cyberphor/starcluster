@@ -8,7 +8,7 @@ Shodan is the flare-gun of the script. With an API key & query statement, it sea
 ## Installation (Kali)
 Download script
 ```
-git clone https://github.com/yoursecuritytech/python-shodan-starcluster.git
+git clone https://github.com/cyberphor/starcluster.git
 ```
 Update what your package manager has cache
 ```
